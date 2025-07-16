@@ -6,13 +6,13 @@
 #    By: tchartie <tchartie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/10 07:22:39 by tchartie          #+#    #+#              #
-#    Updated: 2025/07/10 18:27:42 by tchartie         ###   ########.fr        #
+#    Updated: 2025/07/16 19:01:19 by tchartie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #============ NAME ============#
 
-NAME			= 	bsp
+NAME			= 	bsq
 
 #========= COMPILATOR =========#
 
@@ -51,7 +51,7 @@ all:		$(NAME)
 
 $(NAME):	$(OBJ)
 	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
-	@echo "$(GREEN)bsp successfully compiled! $(BASE_COLOR)"
+	@echo "$(GREEN)bsq successfully compiled! $(BASE_COLOR)"
 
 $(OBJ_DIR)%.o:$(SRC_DIR)%.c
 	@mkdir -p $(dir $@)
@@ -60,11 +60,11 @@ $(OBJ_DIR)%.o:$(SRC_DIR)%.c
 
 clean:
 	@rm -rf $(OBJ_DIR)
-	@echo "$(BLUE)bsp objects files cleanned! $(BASE_COLOR)"
+	@echo "$(BLUE)bsq objects files cleanned! $(BASE_COLOR)"
 
 fclean:		clean
 	@rm -f $(NAME)
-	@echo "$(CYAN)bsp executable file cleanned! $(BASE_COLOR)"
+	@echo "$(CYAN)bsq executable file cleanned! $(BASE_COLOR)"
 
 
 re: 		fclean all
